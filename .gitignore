@@ -169,5 +169,5 @@ dist
 .pnp.\*
 
 .DS_Store
-packages/.DS_Store
+packages/*/.DS_Store
 libs/.DS_Store
