@@ -170,4 +170,4 @@ dist
 
 .DS_Store
 packages/*/.DS_Store
-libs/.DS_Store
+libs/*/.DS_Store
