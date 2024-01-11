@@ -1,0 +1,9 @@
+{
+    "name": "@wander-tag/type-utils",
+    "version": "0.0.1",
+    "module": "index.ts",
+    "type": "module",
+    "dependencies": {
+        "bun-types": "latest"
+    }
+}

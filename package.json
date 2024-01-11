@@ -4,10 +4,33 @@
   "module": "index.ts",
   "type": "module",
   "workspaces": [
-    "packages/a",
-    "packages/b"
+    "packages/playground",
+    "packages/youreit"
   ],
   "scripts": {
-    "clean": "rm -rf node_modules packages/a/node_modules packages/b/node_modules bun.lockb packages/a/bun.lockb packages/b/bun.lockb"
+    "clean": "rm -rf node_modules packages/a/node_modules packages/b/node_modules bun.lockb packages/a/bun.lockb packages/b/bun.lockb",
+    "generate:package": "bun ./scripts/generators/generate.ts `pwd`",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@fastify/autoload": "^5.8.0",
+    "@fastify/cors": "^8.5.0",
+    "@fastify/helmet": "^11.1.1",
+    "@fastify/sensible": "^5.5.0",
+    "@fastify/websocket": "^8.3.1",
+    "@jetit/id": "^0.0.11",
+    "@jetit/publisher": "^3.3.3",
+    "@prisma/client": "^5.8.0",
+    "axios": "^1.6.5",
+    "fastify": "^4.25.2",
+    "fastify-plugin": "^4.5.1",
+    "ioredis": "^5.3.2"
+  },
+  "devDependencies": {
+    "bun-types": "^1.0.22",
+    "husky": "^8.0.0",
+    "prettier": "^3.1.1",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "prisma": "^5.8.0"
   }
 }
