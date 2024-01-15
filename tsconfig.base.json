@@ -1,0 +1,26 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2020", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@wander-tag/database": ["libs/database/src/index.ts"],
+            "@wander-tag/events": ["libs/events/src/index.ts"],
+            "@wander-tag/type-utils": ["libs/type-utils/src/index.ts"],
+            "@wander-tag/utils": ["libs/utils/src/index.ts"]
+        },
+        "types": ["bun-types"]
+    },
+    "exclude": ["node_modules", "tmp"]
+}

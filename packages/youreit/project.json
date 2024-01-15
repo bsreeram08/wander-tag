@@ -1,0 +1,40 @@
+{
+    "name": "youreit",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "application",
+    "sourceRoot": "packages/youreit/src",
+    "targets": {
+        "build": {
+            "executor": "@nx-bun/nx:build",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "entrypoints": ["packages/youreit/src/main.ts"],
+                "outputPath": "dist/youreit",
+                "tsConfig": "packages/youreit/tsconfig.app.json",
+                "smol": false,
+                "bun": true
+            }
+        },
+        "serve": {
+            "executor": "@nx-bun/nx:run",
+            "defaultConfiguration": "development",
+            "options": {
+                "buildTarget": "youreit:build",
+                "tsConfig": "packages/youreit/tsconfig.app.json",
+                "watch": true,
+                "hot": true,
+                "bun": true,
+                "smol": false
+            }
+        },
+        "test": {
+            "executor": "@nx-bun/nx:test",
+            "options": {
+                "smol": false,
+                "bail": true,
+                "tsConfig": "packages/youreit/tsconfig.json",
+                "bun": true
+            }
+        }
+    }
+}

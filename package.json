@@ -1,0 +1,31 @@
+{
+  "name": "wander-tag",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": { "@prisma/client": "^5.8.0", "winston": "^3.11.0" },
+  "devDependencies": {
+    "@nx-bun/nx": "^1.2.0",
+    "@nx-bun/task-worker-runner": "^0.0.4",
+    "@nx/eslint": "17.2.8",
+    "@nx/eslint-plugin": "17.2.8",
+    "@nx/js": "17.2.8",
+    "@swc-node/register": "~1.6.7",
+    "@swc/core": "~1.3.85",
+    "@types/node": "18.7.1",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "bun-types": "latest",
+    "eslint": "~8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "nx": "17.2.8",
+    "prettier": "^3.2.2",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "prisma": "^5.8.0",
+    "typescript": "^5.3.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

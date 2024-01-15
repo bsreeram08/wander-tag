@@ -1,0 +1,32 @@
+{
+    "name": "type-utils",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/type-utils/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx-bun/nx:build",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "entrypoints": ["packages/type-utils/src/index.ts"],
+                "outputPath": "dist/type-utils",
+                "tsConfig": "packages/type-utils/tsconfig.lib.json",
+                "smol": false,
+                "bun": true
+            }
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": ["{options.outputFile}"]
+        },
+        "test": {
+            "executor": "@nx-bun/nx:test",
+            "options": {
+                "smol": false,
+                "bail": true,
+                "bun": false
+            }
+        }
+    },
+    "tags": []
+}

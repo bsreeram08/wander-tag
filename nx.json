@@ -1,0 +1,29 @@
+{
+    "pluginsConfig": {
+        "@nx/js": {
+            "analyzeSourceFiles": true
+        }
+    },
+    "tasksRunnerOptions": {
+        "default": {
+            "runner": "@nx-bun/task-worker-runner",
+            "options": {
+                "cacheableOperations": ["lint", "test", "e2e"]
+            }
+        }
+    },
+    "extends": "nx/presets/npm.json",
+    "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "affected": {
+        "defaultBase": "main"
+    },
+    "cli": {
+        "defaultCollection": "@nx-bun/nx"
+    },
+    "targetDefaults": {
+        "lint": {
+            "inputs": ["default", "{workspaceRoot}/.eslintrc.json", "{workspaceRoot}/.eslintignore", "{workspaceRoot}/eslint.config.js"],
+            "cache": true
+        }
+    }
+}
