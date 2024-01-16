@@ -18,7 +18,8 @@
             "@wander-tag/database": ["libs/database/src/index.ts"],
             "@wander-tag/events": ["libs/events/src/index.ts"],
             "@wander-tag/type-utils": ["libs/type-utils/src/index.ts"],
-            "@wander-tag/utils": ["libs/utils/src/index.ts"]
+            "@wander-tag/utils": ["libs/utils/src/index.ts"],
+            "types": ["libs/types/src/index.ts"]
         },
         "types": ["bun-types"]
     },

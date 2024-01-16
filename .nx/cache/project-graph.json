@@ -54,116 +54,6 @@
         "tags": []
       }
     },
-    "type-utils": {
-      "name": "type-utils",
-      "type": "lib",
-      "data": {
-        "root": "packages/type-utils",
-        "name": "type-utils",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "packages/type-utils/src",
-        "projectType": "library",
-        "targets": {
-          "build": {
-            "executor": "@nx-bun/nx:build",
-            "outputs": [
-              "{options.outputPath}"
-            ],
-            "options": {
-              "entrypoints": [
-                "packages/type-utils/src/index.ts"
-              ],
-              "outputPath": "dist/type-utils",
-              "tsConfig": "packages/type-utils/tsconfig.lib.json",
-              "smol": false,
-              "bun": true
-            },
-            "configurations": {}
-          },
-          "lint": {
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore",
-              "{workspaceRoot}/eslint.config.js"
-            ],
-            "cache": true,
-            "executor": "@nx/eslint:lint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {},
-            "configurations": {}
-          },
-          "test": {
-            "executor": "@nx-bun/nx:test",
-            "options": {
-              "smol": false,
-              "bail": true,
-              "bun": false
-            },
-            "configurations": {}
-          }
-        },
-        "tags": [],
-        "implicitDependencies": []
-      }
-    },
-    "database": {
-      "name": "database",
-      "type": "lib",
-      "data": {
-        "root": "packages/database",
-        "name": "database",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "packages/database/src",
-        "projectType": "library",
-        "targets": {
-          "build": {
-            "executor": "@nx-bun/nx:build",
-            "outputs": [
-              "{options.outputPath}"
-            ],
-            "options": {
-              "entrypoints": [
-                "packages/database/src/index.ts"
-              ],
-              "outputPath": "dist/database",
-              "tsConfig": "packages/database/tsconfig.lib.json",
-              "smol": false,
-              "bun": true
-            },
-            "configurations": {}
-          },
-          "lint": {
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore",
-              "{workspaceRoot}/eslint.config.js"
-            ],
-            "cache": true,
-            "executor": "@nx/eslint:lint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {},
-            "configurations": {}
-          },
-          "test": {
-            "executor": "@nx-bun/nx:test",
-            "options": {
-              "smol": false,
-              "bail": true,
-              "bun": false
-            },
-            "configurations": {}
-          }
-        },
-        "tags": [],
-        "implicitDependencies": []
-      }
-    },
     "youreit": {
       "name": "youreit",
       "type": "app",
@@ -218,11 +108,121 @@
         "tags": []
       }
     },
+    "type-utils": {
+      "name": "type-utils",
+      "type": "lib",
+      "data": {
+        "root": "libs/type-utils",
+        "name": "type-utils",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "packages/type-utils/src",
+        "projectType": "library",
+        "targets": {
+          "build": {
+            "executor": "@nx-bun/nx:build",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "options": {
+              "entrypoints": [
+                "packages/type-utils/src/index.ts"
+              ],
+              "outputPath": "dist/type-utils",
+              "tsConfig": "packages/type-utils/tsconfig.lib.json",
+              "smol": false,
+              "bun": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore",
+              "{workspaceRoot}/eslint.config.js"
+            ],
+            "cache": true,
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {},
+            "configurations": {}
+          },
+          "test": {
+            "executor": "@nx-bun/nx:test",
+            "options": {
+              "smol": false,
+              "bail": true,
+              "bun": false
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
+    "database": {
+      "name": "database",
+      "type": "lib",
+      "data": {
+        "root": "libs/database",
+        "name": "database",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "packages/database/src",
+        "projectType": "library",
+        "targets": {
+          "build": {
+            "executor": "@nx-bun/nx:build",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "options": {
+              "entrypoints": [
+                "packages/database/src/index.ts"
+              ],
+              "outputPath": "dist/database",
+              "tsConfig": "packages/database/tsconfig.lib.json",
+              "smol": false,
+              "bun": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore",
+              "{workspaceRoot}/eslint.config.js"
+            ],
+            "cache": true,
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {},
+            "configurations": {}
+          },
+          "test": {
+            "executor": "@nx-bun/nx:test",
+            "options": {
+              "smol": false,
+              "bail": true,
+              "bun": false
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
     "events": {
       "name": "events",
       "type": "lib",
       "data": {
-        "root": "packages/events",
+        "root": "libs/events",
         "name": "events",
         "$schema": "../../node_modules/nx/schemas/project-schema.json",
         "sourceRoot": "packages/events/src",
@@ -273,11 +273,66 @@
         "implicitDependencies": []
       }
     },
+    "types": {
+      "name": "types",
+      "type": "lib",
+      "data": {
+        "root": "libs/types",
+        "name": "types",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/types/src",
+        "projectType": "library",
+        "targets": {
+          "build": {
+            "executor": "@nx-bun/nx:build",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "options": {
+              "entrypoints": [
+                "libs/types/src/index.ts"
+              ],
+              "outputPath": "dist/types",
+              "tsConfig": "libs/types/tsconfig.lib.json",
+              "smol": false,
+              "bun": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore",
+              "{workspaceRoot}/eslint.config.js"
+            ],
+            "cache": true,
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {},
+            "configurations": {}
+          },
+          "test": {
+            "executor": "@nx-bun/nx:test",
+            "options": {
+              "smol": false,
+              "bail": true,
+              "bun": false
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
     "utils": {
       "name": "utils",
       "type": "lib",
       "data": {
-        "root": "packages/utils",
+        "root": "libs/utils",
         "name": "utils",
         "$schema": "../../node_modules/nx/schemas/project-schema.json",
         "sourceRoot": "packages/utils/src",
@@ -4563,11 +4618,40 @@
   },
   "dependencies": {
     "playground": [],
+    "youreit": [
+      {
+        "source": "youreit",
+        "target": "database",
+        "type": "static"
+      },
+      {
+        "source": "youreit",
+        "target": "utils",
+        "type": "static"
+      }
+    ],
     "type-utils": [],
-    "database": [],
-    "youreit": [],
+    "database": [
+      {
+        "source": "database",
+        "target": "utils",
+        "type": "static"
+      }
+    ],
     "events": [],
-    "utils": [],
+    "types": [],
+    "utils": [
+      {
+        "source": "utils",
+        "target": "database",
+        "type": "static"
+      },
+      {
+        "source": "utils",
+        "target": "events",
+        "type": "static"
+      }
+    ],
     "npm:@ampproject/remapping": [
       {
         "source": "npm:@ampproject/remapping",

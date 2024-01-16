@@ -13780,3 +13780,101 @@ Unable to create nodes for packages/database/project.json using plugin nx-core-b
 [NX Daemon Server] - 2024-01-15T05:44:30.134Z - [WATCHER]: Stopping the watcher for /Users/sreeram/Sreeram/projects/wander-tag (sources)
 [NX Daemon Server] - 2024-01-15T05:44:30.134Z - [WATCHER]: Stopping the watcher for /Users/sreeram/Sreeram/projects/wander-tag (outputs)
 [NX Daemon Server] - 2024-01-15T05:44:30.134Z - Server stopped because: "Stopping the daemon the set of ignored files changed (native)"
+[NX Daemon Server] - 2024-01-15T15:15:22.957Z - Started listening on: /var/folders/0v/4_924dy57vgbnnvpqmtlm9400000gn/T/b88875dc234b7475e1d7/d.sock
+[NX Daemon Server] - 2024-01-15T15:15:22.962Z - [WATCHER]: Subscribed to changes within: /Users/sreeram/Sreeram/projects/wander-tag (native)
+[NX Daemon Server] - 2024-01-15T15:15:22.965Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-15T15:15:22.965Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-15T15:15:22.966Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-15T15:15:22.966Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-15T15:15:22.967Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-15T15:15:22.967Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:15:22.967Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:15:23.141Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-01-15T15:15:23.142Z - Time taken for 'total for creating and serializing project graph' 174.7118752002716ms
+[NX Daemon Server] - 2024-01-15T15:15:23.143Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-01-15T15:15:23.143Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 175. Response time: 2.
+[NX Daemon Server] - 2024-01-15T15:15:31.233Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-01-15T15:15:31.279Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:15:31.280Z - [WATCHER]: 8 file(s) created or restored, 1 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-15T15:15:31.382Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-15T15:15:31.382Z - [REQUEST]: libs/types/tsconfig.lib.json,libs/types/src/index.ts,libs/types/tsconfig.json,libs/types/project.json,libs/types/src/lib/types.spec.ts,libs/types/.eslintrc.json,libs/types/README.md,libs/types/src/lib/types.ts,tsconfig.base.json
+[NX Daemon Server] - 2024-01-15T15:15:31.382Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:15:31.395Z - Time taken for 'hash changed files from watcher' 0.3377079963684082ms
+[NX Daemon Server] - 2024-01-15T15:15:40.752Z - [WATCHER]: libs/events/src/lib/signal.ts was modified
+[NX Daemon Server] - 2024-01-15T15:15:40.753Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:15:40.955Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-15T15:15:40.955Z - [REQUEST]: libs/events/src/lib/signal.ts
+[NX Daemon Server] - 2024-01-15T15:15:40.955Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:15:40.987Z - [WATCHER]: libs/events/src/lib/signal.ts was modified
+[NX Daemon Server] - 2024-01-15T15:15:40.987Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:15:40.988Z - Time taken for 'hash changed files from watcher' 0.3975839614868164ms
+[NX Daemon Server] - 2024-01-15T15:15:41.388Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-15T15:15:41.388Z - [REQUEST]: libs/events/src/lib/signal.ts
+[NX Daemon Server] - 2024-01-15T15:15:41.388Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:15:41.403Z - Time taken for 'hash changed files from watcher' 0.16049981117248535ms
+[NX Daemon Server] - 2024-01-15T15:16:26.990Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:16:26.991Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:16:27.792Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-15T15:16:27.792Z - [REQUEST]: libs/utils/src/lib/wanter-tag.service.ts
+[NX Daemon Server] - 2024-01-15T15:16:27.792Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:16:27.808Z - Time taken for 'hash changed files from watcher' 0.1766669750213623ms
+[NX Daemon Server] - 2024-01-15T15:16:34.909Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:16:34.909Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:16:36.510Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-15T15:16:36.510Z - [REQUEST]: libs/utils/src/lib/wanter-tag.service.ts
+[NX Daemon Server] - 2024-01-15T15:16:36.510Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:16:36.533Z - Time taken for 'hash changed files from watcher' 0.5250828266143799ms
+[NX Daemon Server] - 2024-01-15T15:18:02.992Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:18:02.993Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:18:06.194Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-15T15:18:06.194Z - [REQUEST]: libs/utils/src/lib/wanter-tag.service.ts
+[NX Daemon Server] - 2024-01-15T15:18:06.194Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:18:06.208Z - Time taken for 'hash changed files from watcher' 0.16204190254211426ms
+[NX Daemon Server] - 2024-01-15T15:18:17.978Z - [WATCHER]: libs/events/src/index.ts was modified
+[NX Daemon Server] - 2024-01-15T15:18:17.978Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:18:24.380Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-15T15:18:24.382Z - [REQUEST]: libs/events/src/index.ts
+[NX Daemon Server] - 2024-01-15T15:18:24.382Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:18:24.395Z - Time taken for 'hash changed files from watcher' 0.15612506866455078ms
+[NX Daemon Server] - 2024-01-15T15:19:31.008Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:19:31.008Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:19:32.758Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:19:32.758Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:19:37.409Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-15T15:19:37.409Z - [REQUEST]: libs/utils/src/lib/wanter-tag.service.ts
+[NX Daemon Server] - 2024-01-15T15:19:37.409Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:19:37.427Z - Time taken for 'hash changed files from watcher' 0.14158391952514648ms
+[NX Daemon Server] - 2024-01-15T15:19:38.330Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:19:38.331Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:19:44.732Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-15T15:19:44.732Z - [REQUEST]: libs/utils/src/lib/wanter-tag.service.ts
+[NX Daemon Server] - 2024-01-15T15:19:44.732Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:19:44.744Z - Time taken for 'hash changed files from watcher' 0.14158296585083008ms
+[NX Daemon Server] - 2024-01-15T15:19:55.037Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:19:55.037Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:20:00.501Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:20:00.501Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:20:01.439Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-15T15:20:01.439Z - [REQUEST]: libs/utils/src/lib/wanter-tag.service.ts
+[NX Daemon Server] - 2024-01-15T15:20:01.439Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:20:01.452Z - Time taken for 'hash changed files from watcher' 0.15445899963378906ms
+[NX Daemon Server] - 2024-01-15T15:20:03.566Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:20:03.566Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:20:05.356Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:20:05.356Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:20:09.970Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-15T15:20:09.970Z - [REQUEST]: libs/utils/src/lib/wanter-tag.service.ts
+[NX Daemon Server] - 2024-01-15T15:20:09.970Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:20:09.980Z - Time taken for 'hash changed files from watcher' 0.46650004386901855ms
+[NX Daemon Server] - 2024-01-15T15:20:40.514Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:20:40.515Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:20:40.710Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:20:40.710Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:20:43.589Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:20:43.589Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:20:43.819Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-15T15:20:43.820Z - [WATCHER]: libs/utils/src/lib/wanter-tag.service.ts was modified
+[NX Daemon Server] - 2024-01-15T15:20:46.916Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-15T15:20:46.917Z - [REQUEST]: libs/utils/src/lib/wanter-tag.service.ts
+[NX Daemon Server] - 2024-01-15T15:20:46.917Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-15T15:20:46.927Z - Time taken for 'hash changed files from watcher' 0.2195420265197754ms

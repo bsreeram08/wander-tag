@@ -2,6 +2,10 @@
   "version": "6.0",
   "nxVersion": "17.2.8",
   "deps": {
+    "@jetit/publisher": "^3.3.3",
+    "@prisma/client": "^5.8.0",
+    "purify-ts": "^2.0.3",
+    "winston": "^3.11.0",
     "@nx-bun/nx": "^1.2.0",
     "@nx-bun/task-worker-runner": "^0.0.4",
     "@nx/eslint": "17.2.8",
@@ -18,20 +22,24 @@
     "nx": "17.2.8",
     "prettier": "^3.2.2",
     "prettier-plugin-organize-imports": "^3.2.4",
+    "prisma": "^5.8.0",
     "typescript": "^5.3.3"
   },
   "pathMappings": {
     "@wander-tag/database": [
-      "packages/database/src/index.ts"
+      "libs/database/src/index.ts"
     ],
     "@wander-tag/events": [
-      "packages/events/src/index.ts"
+      "libs/events/src/index.ts"
     ],
     "@wander-tag/type-utils": [
-      "packages/type-utils/src/index.ts"
+      "libs/type-utils/src/index.ts"
     ],
     "@wander-tag/utils": [
-      "packages/utils/src/index.ts"
+      "libs/utils/src/index.ts"
+    ],
+    "types": [
+      "libs/types/src/index.ts"
     ]
   },
   "nxJsonPlugins": [],
@@ -43,244 +51,67 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".eslintrc.json",
-        "hash": "7528327399702426422"
+        "file": "tsconfig.base.json",
+        "hash": "7647535162483346182"
       },
       {
-        "file": "package.json",
-        "hash": "3376052738716854962"
-      },
-      {
-        "file": "bun.lockb",
-        "hash": "700089155444342516"
-      },
-      {
-        "file": ".nx/cache/file-map.json",
-        "hash": "17983403068947468499"
-      },
-      {
-        "file": ".nx/cache/nx_files.nxt",
-        "hash": "17905247246242883325"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "12583847111903126747"
+        "file": "prisma/migrations/20240115054546_init/migration.sql",
+        "hash": "7184469820478302478"
       },
       {
         "file": ".eslintignore",
         "hash": "7663861978715868291"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "1906191272411910815"
-      },
-      {
-        "file": ".nx/cache/project-graph.json",
-        "hash": "1243768607900828845"
-      },
-      {
-        "file": "README.md",
-        "hash": "5579273215164030411"
-      },
-      {
         "file": ".DS_Store",
         "hash": "12690445410705083852"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "15819775340235496716"
-      },
-      {
-        "file": ".nx/cache/d/server-process.json",
-        "hash": "13275805838193296277"
       },
       {
         "file": "nx.json",
         "hash": "17753185430140807138"
       },
       {
+        "file": "prisma/migrations/migration_lock.toml",
+        "hash": "11493296588214560035"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "15819775340235496716"
+      },
+      {
+        "file": "bun.lockb",
+        "hash": "15094730235364646455"
+      },
+      {
         "file": "package-lock.json",
         "hash": "920683490314729576"
+      },
+      {
+        "file": "README.md",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "16502688471404260321"
+      },
+      {
+        "file": "package.json",
+        "hash": "12520940702426844636"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "7528327399702426422"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "12583847111903126747"
+      },
+      {
+        "file": "prisma/schema.prisma",
+        "hash": "1261936723453145056"
       }
     ],
     "projectFileMap": {
-      "utils": [
-        {
-          "file": "packages/utils/.eslintrc.json",
-          "hash": "828314309907508640"
-        },
-        {
-          "file": "packages/utils/README.md",
-          "hash": "7746097337039079902"
-        },
-        {
-          "file": "packages/utils/project.json",
-          "hash": "7121859666818583076"
-        },
-        {
-          "file": "packages/utils/src/index.ts",
-          "hash": "5679720557803443103"
-        },
-        {
-          "file": "packages/utils/src/lib/utils.spec.ts",
-          "hash": "13547904707949227129",
-          "deps": [
-            "npm:bun:test"
-          ]
-        },
-        {
-          "file": "packages/utils/src/lib/utils.ts",
-          "hash": "927468127119524516"
-        },
-        {
-          "file": "packages/utils/tsconfig.json",
-          "hash": "8110284516373897701"
-        },
-        {
-          "file": "packages/utils/tsconfig.lib.json",
-          "hash": "11459669318406032689"
-        }
-      ],
-      "events": [
-        {
-          "file": "packages/events/.eslintrc.json",
-          "hash": "828314309907508640"
-        },
-        {
-          "file": "packages/events/README.md",
-          "hash": "14584072328601286722"
-        },
-        {
-          "file": "packages/events/project.json",
-          "hash": "4027033632085711739"
-        },
-        {
-          "file": "packages/events/src/index.ts",
-          "hash": "3270372857829334006"
-        },
-        {
-          "file": "packages/events/src/lib/events.spec.ts",
-          "hash": "2752742292032036217",
-          "deps": [
-            "npm:bun:test"
-          ]
-        },
-        {
-          "file": "packages/events/src/lib/events.ts",
-          "hash": "8543170699393436467"
-        },
-        {
-          "file": "packages/events/tsconfig.json",
-          "hash": "8110284516373897701"
-        },
-        {
-          "file": "packages/events/tsconfig.lib.json",
-          "hash": "11459669318406032689"
-        }
-      ],
-      "youreit": [
-        {
-          "file": "packages/youreit/README.md",
-          "hash": "11252291158129274919"
-        },
-        {
-          "file": "packages/youreit/project.json",
-          "hash": "6379079022552177656"
-        },
-        {
-          "file": "packages/youreit/src/main.spec.ts",
-          "hash": "14014543324772798643",
-          "deps": [
-            "npm:bun:test"
-          ]
-        },
-        {
-          "file": "packages/youreit/src/main.ts",
-          "hash": "3702989942762944381"
-        },
-        {
-          "file": "packages/youreit/tsconfig.app.json",
-          "hash": "11459669318406032689"
-        },
-        {
-          "file": "packages/youreit/tsconfig.json",
-          "hash": "2881060810336594929"
-        }
-      ],
-      "type-utils": [
-        {
-          "file": "packages/type-utils/.eslintrc.json",
-          "hash": "828314309907508640"
-        },
-        {
-          "file": "packages/type-utils/README.md",
-          "hash": "16635492270655113720"
-        },
-        {
-          "file": "packages/type-utils/project.json",
-          "hash": "2731711767798342987"
-        },
-        {
-          "file": "packages/type-utils/src/index.ts",
-          "hash": "14799433141771503027"
-        },
-        {
-          "file": "packages/type-utils/src/lib/type-utils.spec.ts",
-          "hash": "17826898922754608036",
-          "deps": [
-            "npm:bun:test"
-          ]
-        },
-        {
-          "file": "packages/type-utils/src/lib/type-utils.ts",
-          "hash": "3019894846473302160"
-        },
-        {
-          "file": "packages/type-utils/tsconfig.json",
-          "hash": "8110284516373897701"
-        },
-        {
-          "file": "packages/type-utils/tsconfig.lib.json",
-          "hash": "11459669318406032689"
-        }
-      ],
-      "database": [
-        {
-          "file": "packages/database/.eslintrc.json",
-          "hash": "828314309907508640"
-        },
-        {
-          "file": "packages/database/README.md",
-          "hash": "5702017011554649907"
-        },
-        {
-          "file": "packages/database/project.json",
-          "hash": "18437771223123507112"
-        },
-        {
-          "file": "packages/database/src/index.ts",
-          "hash": "14888547845844273142"
-        },
-        {
-          "file": "packages/database/src/lib/database.spec.ts",
-          "hash": "5445328810384525288",
-          "deps": [
-            "npm:bun:test"
-          ]
-        },
-        {
-          "file": "packages/database/src/lib/database.ts",
-          "hash": "8625969523874349541"
-        },
-        {
-          "file": "packages/database/tsconfig.json",
-          "hash": "8110284516373897701"
-        },
-        {
-          "file": "packages/database/tsconfig.lib.json",
-          "hash": "11459669318406032689"
-        }
-      ],
       "playground": [
         {
           "file": "packages/playground/README.md",
@@ -308,6 +139,247 @@
         {
           "file": "packages/playground/tsconfig.json",
           "hash": "2881060810336594929"
+        }
+      ],
+      "youreit": [
+        {
+          "file": "packages/youreit/README.md",
+          "hash": "11252291158129274919"
+        },
+        {
+          "file": "packages/youreit/project.json",
+          "hash": "6379079022552177656"
+        },
+        {
+          "file": "packages/youreit/src/initialize.ts",
+          "hash": "2931303451010511252",
+          "deps": [
+            "database"
+          ]
+        },
+        {
+          "file": "packages/youreit/src/main.spec.ts",
+          "hash": "14014543324772798643",
+          "deps": [
+            "npm:bun:test"
+          ]
+        },
+        {
+          "file": "packages/youreit/src/main.ts",
+          "hash": "7020517354849621352"
+        },
+        {
+          "file": "packages/youreit/src/users/crud.ts",
+          "hash": "11840132649186118131",
+          "deps": [
+            "utils"
+          ]
+        },
+        {
+          "file": "packages/youreit/tsconfig.app.json",
+          "hash": "11459669318406032689"
+        },
+        {
+          "file": "packages/youreit/tsconfig.json",
+          "hash": "2881060810336594929"
+        }
+      ],
+      "database": [
+        {
+          "file": "libs/database/.eslintrc.json",
+          "hash": "828314309907508640"
+        },
+        {
+          "file": "libs/database/README.md",
+          "hash": "5702017011554649907"
+        },
+        {
+          "file": "libs/database/project.json",
+          "hash": "18437771223123507112"
+        },
+        {
+          "file": "libs/database/src/index.ts",
+          "hash": "14888547845844273142"
+        },
+        {
+          "file": "libs/database/src/lib/database.ts",
+          "hash": "14781436063398253746",
+          "deps": [
+            "npm:@prisma/client",
+            "utils"
+          ]
+        },
+        {
+          "file": "libs/database/tsconfig.json",
+          "hash": "8110284516373897701"
+        },
+        {
+          "file": "libs/database/tsconfig.lib.json",
+          "hash": "11459669318406032689"
+        }
+      ],
+      "type-utils": [
+        {
+          "file": "libs/type-utils/.eslintrc.json",
+          "hash": "828314309907508640"
+        },
+        {
+          "file": "libs/type-utils/README.md",
+          "hash": "16635492270655113720"
+        },
+        {
+          "file": "libs/type-utils/project.json",
+          "hash": "2731711767798342987"
+        },
+        {
+          "file": "libs/type-utils/src/index.ts",
+          "hash": "14799433141771503027"
+        },
+        {
+          "file": "libs/type-utils/src/lib/type-utils.spec.ts",
+          "hash": "17826898922754608036",
+          "deps": [
+            "npm:bun:test"
+          ]
+        },
+        {
+          "file": "libs/type-utils/src/lib/type-utils.ts",
+          "hash": "10255086313009542350"
+        },
+        {
+          "file": "libs/type-utils/tsconfig.json",
+          "hash": "8110284516373897701"
+        },
+        {
+          "file": "libs/type-utils/tsconfig.lib.json",
+          "hash": "11459669318406032689"
+        }
+      ],
+      "types": [
+        {
+          "file": "libs/types/.eslintrc.json",
+          "hash": "828314309907508640"
+        },
+        {
+          "file": "libs/types/README.md",
+          "hash": "1521244697732949525"
+        },
+        {
+          "file": "libs/types/project.json",
+          "hash": "12987722883630244142"
+        },
+        {
+          "file": "libs/types/src/index.ts",
+          "hash": "1748383720051645230"
+        },
+        {
+          "file": "libs/types/src/lib/types.spec.ts",
+          "hash": "5055586767157100840",
+          "deps": [
+            "npm:bun:test"
+          ]
+        },
+        {
+          "file": "libs/types/src/lib/types.ts",
+          "hash": "11348980248904837413"
+        },
+        {
+          "file": "libs/types/tsconfig.json",
+          "hash": "8110284516373897701"
+        },
+        {
+          "file": "libs/types/tsconfig.lib.json",
+          "hash": "11459669318406032689"
+        }
+      ],
+      "events": [
+        {
+          "file": "libs/events/.eslintrc.json",
+          "hash": "828314309907508640"
+        },
+        {
+          "file": "libs/events/README.md",
+          "hash": "14584072328601286722"
+        },
+        {
+          "file": "libs/events/project.json",
+          "hash": "4027033632085711739"
+        },
+        {
+          "file": "libs/events/src/index.ts",
+          "hash": "18113098185656619885"
+        },
+        {
+          "file": "libs/events/src/lib/events.map.ts",
+          "hash": "17530589929217666162"
+        },
+        {
+          "file": "libs/events/src/lib/events.spec.ts",
+          "hash": "2752742292032036217",
+          "deps": [
+            "npm:bun:test"
+          ]
+        },
+        {
+          "file": "libs/events/src/lib/signal.ts",
+          "hash": "13919512081897141136",
+          "deps": [
+            "npm:@jetit/publisher"
+          ]
+        },
+        {
+          "file": "libs/events/tsconfig.json",
+          "hash": "8110284516373897701"
+        },
+        {
+          "file": "libs/events/tsconfig.lib.json",
+          "hash": "11459669318406032689"
+        }
+      ],
+      "utils": [
+        {
+          "file": "libs/utils/.eslintrc.json",
+          "hash": "828314309907508640"
+        },
+        {
+          "file": "libs/utils/README.md",
+          "hash": "7746097337039079902"
+        },
+        {
+          "file": "libs/utils/project.json",
+          "hash": "7121859666818583076"
+        },
+        {
+          "file": "libs/utils/src/index.ts",
+          "hash": "16910297186831047736"
+        },
+        {
+          "file": "libs/utils/src/lib/logger.spec.ts",
+          "hash": "18223319031344195654"
+        },
+        {
+          "file": "libs/utils/src/lib/logger.ts",
+          "hash": "651896267834222271",
+          "deps": [
+            "npm:winston"
+          ]
+        },
+        {
+          "file": "libs/utils/src/lib/wanter-tag.service.ts",
+          "hash": "6482819383092938189",
+          "deps": [
+            "npm:@prisma/client",
+            "database",
+            "events"
+          ]
+        },
+        {
+          "file": "libs/utils/tsconfig.json",
+          "hash": "8110284516373897701"
+        },
+        {
+          "file": "libs/utils/tsconfig.lib.json",
+          "hash": "11459669318406032689"
         }
       ]
     }
