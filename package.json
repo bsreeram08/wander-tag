@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
-  "dependencies": { "@jetit/publisher": "^3.3.3", "@prisma/client": "^5.8.0", "purify-ts": "^2.0.3", "winston": "^3.11.0" },
+  "dependencies": { "@jetit/publisher": "^3.3.3", "@prisma/client": "^5.8.0", "purify-ts": "^2.0.3", "valibot": "^0.25.0", "winston": "^3.11.0" },
   "devDependencies": {
     "@nx-bun/nx": "^1.2.0",
     "@nx-bun/task-worker-runner": "^0.0.4",
