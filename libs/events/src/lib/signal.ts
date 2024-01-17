@@ -1,4 +1,5 @@
 import { Publisher, setRedisConfig } from '@jetit/publisher';
+import { TRedisConnectionOptions } from 'types';
 import { PublisherEvents, TSignalEventsMap } from './events.map';
 
 const shutdown = async function (publisher: Publisher): Promise<void> {
@@ -12,28 +13,11 @@ const shutdown = async function (publisher: Publisher): Promise<void> {
     process.exit(0);
 };
 
-export function signal(serviceName: string) {
-    const clusterCredentials = getClusterCredentials();
-
+export function signal(serviceName: string, options: TRedisConnectionOptions) {
     /**
      * Default redis configuration.
      */
-    setRedisConfig({
-        cluster: {
-            nodes: [
-                {
-                    host: clusterCredentials.clusterHost,
-                    port: clusterCredentials.clusterPort,
-                },
-            ],
-            options: {
-                redisOptions: {
-                    username: clusterCredentials.clusterUsername,
-                    password: clusterCredentials.clusterPassword,
-                },
-            },
-        },
-    });
+    setRedisConfig(options);
 
     const publisher = new Publisher(serviceName);
     console.log('The Publisher is initialized');
@@ -96,15 +80,6 @@ export function signal(serviceName: string) {
          * @returns Promise<void>
          */
         shutdown: async () => await shutdown(publisher),
-    };
-}
-
-function getClusterCredentials() {
-    return {
-        clusterHost: process.env['REDIS_CLUSTER_HOST'],
-        clusterPort: parseInt(process.env['REDIS_CLUSTER_PORT'] ?? '6379'),
-        clusterUsername: process.env['REDIS_CLUSTER_USER'],
-        clusterPassword: process.env['REDIS_CLUSTER_PASS'],
     };
 }
 
