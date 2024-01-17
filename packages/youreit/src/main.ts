@@ -1,5 +1,7 @@
-function youreit(): string {
-    return 'youreit';
+import { initialize } from './initialize';
+
+async function bootstrap() {
+    await initialize();
 }
 
-console.log(youreit());
+bootstrap().then().catch();

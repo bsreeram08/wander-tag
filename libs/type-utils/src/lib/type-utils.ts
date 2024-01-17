@@ -42,3 +42,5 @@ export type FilterKeys<Type, Key extends keyof Type> = {
 export type RemoveKeysOfType<Type, Key> = {
     [key in keyof Type as Type[key] extends Key ? never : key]: Type[key];
 };
+
+export type UnionOfArrayValues<T extends Array<unknown>> = T[number];

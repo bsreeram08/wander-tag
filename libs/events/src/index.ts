@@ -1,1 +1,2 @@
-export * from './lib/events';
+export * from './lib/events.map';
+export * from './lib/signal';
