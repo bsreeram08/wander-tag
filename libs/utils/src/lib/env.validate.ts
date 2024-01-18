@@ -1,4 +1,4 @@
-import { Prettify, UnionOfArrayValues, ValueOf } from '@wander-tag/type-utils';
+import { Prettify, UnionOfArrayValues } from '@wander-tag/type-utils';
 import { deepFreeze } from './deep-freeze';
 
 type ENABLED_SERVICES = 'GCLOUD' | 'PRISMA' | 'REDIS' | 'REDIS_CLUSTER' | 'RABBITMQ';
@@ -12,9 +12,10 @@ type ENABLED_SERVICES_MAP = {
 };
 
 type TCheckEnv = Prettify<Partial<ENABLED_SERVICES_MAP> & { [Key: string]: REQUIRED_VALUES }>;
-type TGetOptionalAsObject<T extends TCheckEnv> = { [K in UnionOfArrayValues<ValueOf<T>['optional']>]: string };
-type TGetMandatoryAsObject<T extends TCheckEnv> = { [K in UnionOfArrayValues<ValueOf<T>['required']>]: string };
-type TResponse<T extends TCheckEnv> = Prettify<Record<keyof T, Partial<TGetOptionalAsObject<T>> & TGetMandatoryAsObject<T>>>;
+
+type TResponse<T extends TCheckEnv> = {
+    [K in keyof T]: Partial<{ [Key in UnionOfArrayValues<T[K]['optional']>]: string }> & { [Key in UnionOfArrayValues<T[K]['required']>]: string };
+};
 
 export function getEnvironmentVariables<const T extends TCheckEnv>(options: T): TResponse<T> {
     const keys: Array<keyof T> = Object.keys(options);
